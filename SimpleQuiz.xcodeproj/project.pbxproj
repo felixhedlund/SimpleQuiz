@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5A81D322B1AA0956CE1B982 /* Pods_SimpleQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DA47A30168ABB8E085ABE8 /* Pods_SimpleQuiz.framework */; };
 		F72A74DF1DCBBB7D00B40EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A74DE1DCBBB7D00B40EFF /* AppDelegate.swift */; };
 		F72A74E11DCBBB7D00B40EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A74E01DCBBB7D00B40EFF /* ViewController.swift */; };
 		F72A74E41DCBBB7D00B40EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72A74E21DCBBB7D00B40EFF /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D17A96F56E8F67F6D047A4B /* Pods-SimpleQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleQuiz/Pods-SimpleQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		D2DA47A30168ABB8E085ABE8 /* Pods_SimpleQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24ECFFA1ACAB0A0E6CAD198 /* Pods-SimpleQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleQuiz/Pods-SimpleQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		F72A74DB1DCBBB7D00B40EFF /* SimpleQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72A74DE1DCBBB7D00B40EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F72A74E01DCBBB7D00B40EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A81D322B1AA0956CE1B982 /* Pods_SimpleQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		680EDB51D640DAAB02FDA7DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E24ECFFA1ACAB0A0E6CAD198 /* Pods-SimpleQuiz.debug.xcconfig */,
+				1D17A96F56E8F67F6D047A4B /* Pods-SimpleQuiz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77CA7498732AAECAD42A86CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DA47A30168ABB8E085ABE8 /* Pods_SimpleQuiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F72A74D21DCBBB7D00B40EFF = {
 			isa = PBXGroup;
 			children = (
 				F72A74DD1DCBBB7D00B40EFF /* SimpleQuiz */,
 				F72A74DC1DCBBB7D00B40EFF /* Products */,
+				680EDB51D640DAAB02FDA7DF /* Pods */,
+				77CA7498732AAECAD42A86CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F72A74F01DCBBB7D00B40EFF /* Build configuration list for PBXNativeTarget "SimpleQuiz" */;
 			buildPhases = (
+				3D11B6EF65E64518130FFE97 /* [CP] Check Pods Manifest.lock */,
 				F72A74D71DCBBB7D00B40EFF /* Sources */,
 				F72A74D81DCBBB7D00B40EFF /* Frameworks */,
 				F72A74D91DCBBB7D00B40EFF /* Resources */,
+				99A2D946E219063FB1A3D6B2 /* [CP] Embed Pods Frameworks */,
+				347A7988647841B7E7161726 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		347A7988647841B7E7161726 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleQuiz/Pods-SimpleQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D11B6EF65E64518130FFE97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99A2D946E219063FB1A3D6B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleQuiz/Pods-SimpleQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F72A74D71DCBBB7D00B40EFF /* Sources */ = {
@@ -263,10 +338,12 @@
 		};
 		F72A74F11DCBBB7D00B40EFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24ECFFA1ACAB0A0E6CAD198 /* Pods-SimpleQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NRNUQBB7ZW;
 				INFOPLIST_FILE = SimpleQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.gingerapps.SimpleQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,10 +353,12 @@
 		};
 		F72A74F21DCBBB7D00B40EFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D17A96F56E8F67F6D047A4B /* Pods-SimpleQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NRNUQBB7ZW;
 				INFOPLIST_FILE = SimpleQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.gingerapps.SimpleQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";

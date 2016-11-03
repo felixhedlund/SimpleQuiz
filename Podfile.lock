@@ -1,0 +1,35 @@
+PODS:
+  - DATAStack (6.1.2)
+  - IBAnimatable (3.0.1)
+  - Sync (2.3.4):
+    - DATAStack (~> 6.1.2)
+    - SYNCPropertyMapper (~> 5.1.2)
+  - SYNCPropertyMapper (5.1.2)
+
+DEPENDENCIES:
+  - IBAnimatable (from `https://github.com/IBAnimatable/IBAnimatable.git`)
+  - Sync (from `https://github.com/hyperoslo/Sync.git`)
+
+EXTERNAL SOURCES:
+  IBAnimatable:
+    :git: https://github.com/IBAnimatable/IBAnimatable.git
+  Sync:
+    :git: https://github.com/hyperoslo/Sync.git
+
+CHECKOUT OPTIONS:
+  IBAnimatable:
+    :commit: ddc85965dbb98c14095e904ba3e860e9dc7212eb
+    :git: https://github.com/IBAnimatable/IBAnimatable.git
+  Sync:
+    :commit: 7944779adac08aab988f4cbdfcd629be3f94d667
+    :git: https://github.com/hyperoslo/Sync.git
+
+SPEC CHECKSUMS:
+  DATAStack: a45fc144e15193f1b22c26b507cc46655ce96a71
+  IBAnimatable: 709f04a2b951c55db9ac4d8893684830bbdd0be2
+  Sync: 50c2ea874bd6b8d6b414efbc8e882179aa4194d2
+  SYNCPropertyMapper: e4cf0f851aa3a1307a42985ab8600787b3382427
+
+PODFILE CHECKSUM: ecaeee0a9eaaa2b5e0cdb86dcf5ba266bba9a019
+
+COCOAPODS: 1.1.1

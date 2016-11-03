@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>DATAStack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IBAnimatable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SimpleQuiz.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SYNCPropertyMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Sync.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1175BCFEE4F5028C75D2C91EF23D88C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65C74987875B205DE05D1A1F5B8CA6DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>934C40F4F59A98367CB8910F2F034093</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9EC1554A22943688D0CB60CA48A83AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C78830FFF562149B4B693AB9DB8D3DF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
