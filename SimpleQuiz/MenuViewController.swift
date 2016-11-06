@@ -28,6 +28,11 @@ class MenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func returnToMenu(){
+        self.startGameButton.slide(.in, direction: .left)
+        self.startGameLabel.slide(.in, direction: .right)
+    }
 
     @IBAction func didPressStartGame(_ sender: UIButton) {
         self.startGameLabel.fade(.out)

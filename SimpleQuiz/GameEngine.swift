@@ -21,15 +21,16 @@ protocol Game{
 }
 
 class GameEngine: NSObject, Game{
-    var firstVC: UIViewController!
+    var firstVC: MenuViewController!
     
-    var questionsLeft = 10
+    var totalQuestions = 3
+    var currentQuestion = -1
     var questions = [Question]()
     var currentQuestionController: QuestionViewController?
     
     var hasUsed5050 = false
     var hasUsedPlus10 = false
-    init(firstVC: UIViewController){
+    init(firstVC: MenuViewController){
         super.init()
         self.firstVC = firstVC
     }
@@ -48,7 +49,7 @@ class GameEngine: NSObject, Game{
     func addQuestionsToArray(allQuestions: [Question]){
         let mutableQuestionArray = NSMutableArray(array: allQuestions)
         
-        for _ in 0...questionsLeft - 1{
+        for _ in 0...totalQuestions - 1{
             let randomInt = Int(arc4random_uniform(UInt32(mutableQuestionArray.count)))
             questions.append(mutableQuestionArray.object(at: randomInt) as! Question)
             mutableQuestionArray.removeObject(at: randomInt)
@@ -83,16 +84,27 @@ class GameEngine: NSObject, Game{
     }
     
     private func addNewQuestion(){
-        let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Question") as! QuestionViewController
-        self.currentQuestionController = vc
-        vc.game = self
-        self.firstVC.present(vc, animated: true, completion: {
+        if self.currentQuestion == self.totalQuestions - 1{
+            self.endGame()
+        }else{
+            let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Question") as! QuestionViewController
+            self.currentQuestionController = vc
+            vc.game = self
             
-        })
+            currentQuestion += 1
+            vc.question = self.questions[currentQuestion]
+            
+            
+            self.firstVC.present(vc, animated: true, completion: {
+                
+            })
+        }
+        
     }
     
     func endGame() {
         (UIApplication.shared.delegate as! AppDelegate).background.setInitialColors()
+        self.firstVC.returnToMenu()
     }
     
 }

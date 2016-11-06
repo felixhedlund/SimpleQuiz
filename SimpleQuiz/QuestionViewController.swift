@@ -19,11 +19,26 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     var timer: Timer!
     var question: Question!
     
-    let startTime: TimeInterval = 15
+    let startTime: TimeInterval = 5
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setAnswers()
+        self.setQuestion()
         // Do any additional setup after loading the view.
+    }
+    
+    private func setQuestion(){
+        self.questionTextView.text = self.question.question!
+    }
+    
+    private func setAnswers(){
+        let alternatives = NSKeyedUnarchiver.unarchiveObject(with: question.alternatives! as Data) as! [String]
+        var index = 0
+        for answer in alternatives{
+            self.answers[index].setTitle(answer, for: .normal)
+            index += 1
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +84,31 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     }
     
     func didPressFiftyFifty() {
+        var uncorrectAnswerArray: [Int] = [Int]()
         
+        var index = 0
+        for _ in self.answers{
+            if isIndexCorrectAnswer(index: index){
+                
+            }else{
+                uncorrectAnswerArray.append(index)
+            }
+            index += 1
+        }
+        
+        for _ in 0...1{
+            let randomInt = Int(arc4random_uniform(UInt32(uncorrectAnswerArray.count)))
+            let removedAnswer = uncorrectAnswerArray.remove(at: randomInt)
+            self.answers[removedAnswer].fade(.out)
+        }
+        
+    }
+    
+    private func isIndexCorrectAnswer(index: Int) -> Bool{
+        if index == Int(self.question.correctAlternative){
+            return true
+        }
+        return false
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,6 +117,31 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     }
     
     @IBAction func didPressAnswer(_ sender: AnimatableButton) {
+        self.timer.invalidate()
+        self.timerView.layer.removeAllAnimations()
+        var index = 0
+        for button in self.answers{
+            if sender == button{
+                if self.isIndexCorrectAnswer(index: index){
+                    self.answerWasChosen(correct: true, button: sender)
+                }else{
+                    self.answerWasChosen(correct: false, button: sender)
+                }
+            }
+            index += 1
+        }
+    }
+    
+    private func answerWasChosen(correct: Bool, button: AnimatableButton){
+        if correct{
+            button.fillColor = UIColor.green
+        }else{
+            button.fillColor = UIColor.red
+        }
+        
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { (timer) in
+            self.game.nextQuestion()
+        })
     }
 
     

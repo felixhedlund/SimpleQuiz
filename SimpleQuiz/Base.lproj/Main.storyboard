@@ -322,7 +322,7 @@
         <!--Question View Controller-->
         <scene sceneID="Sn1-jp-x80">
             <objects>
-                <viewController storyboardIdentifier="Question" id="CJ8-lM-fxU" customClass="QuestionViewController" customModule="SimpleQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Question" modalTransitionStyle="crossDissolve" id="CJ8-lM-fxU" customClass="QuestionViewController" customModule="SimpleQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UyD-UF-Zot"/>
                         <viewControllerLayoutGuide type="bottom" id="bco-7q-jt3"/>
@@ -589,7 +589,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="didPressAnswer:" destination="CJ8-lM-fxU" eventType="touchDragOutside" id="eOq-gJ-Qxh"/>
+                                                    <action selector="didPressAnswer:" destination="CJ8-lM-fxU" eventType="touchUpInside" id="V4z-Rz-41Q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
