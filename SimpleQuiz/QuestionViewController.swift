@@ -66,6 +66,7 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
         }, completion: {
             (value: Bool) in
             if value == true{
+                self.game.setQuestionUnanswered()
                 self.setTotalTime()
                 self.game.nextQuestion()
             }
@@ -134,8 +135,10 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
         for button in self.answers{
             if sender == button{
                 if self.isIndexCorrectAnswer(index: index){
+                    self.game.setQuestionCorrect()
                     self.answerWasChosen(correct: true, button: sender)
                 }else{
+                    self.game.setQuestionIncorrect()
                     self.answerWasChosen(correct: false, button: sender)
                 }
             }

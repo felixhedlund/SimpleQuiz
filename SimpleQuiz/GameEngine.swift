@@ -15,6 +15,10 @@ protocol Game{
     
     
     func timeForFinishedQuestion(timeInterval: TimeInterval)
+    func setQuestionUnanswered()
+    func setQuestionCorrect()
+    func setQuestionIncorrect()
+    
     
     func useFiftyFifty()
     func usePlusTen()
@@ -30,6 +34,10 @@ class GameEngine: NSObject, Game{
     var questions = [Question]()
     var currentQuestionController: QuestionViewController?
     var timeIntervals = [TimeInterval]()
+    
+    var unansweredQuestions = [Int]()
+    var correctQuestions = [Int]()
+    var incorrectQuestions = [Int]()
     
     var hasUsed5050 = false
     var hasUsedPlus10 = false
@@ -88,6 +96,18 @@ class GameEngine: NSObject, Game{
     
     func hasUsedPlusTen() -> Bool{
         return self.hasUsedPlus10
+    }
+    
+    func setQuestionCorrect() {
+        self.correctQuestions.append(self.currentQuestion)
+    }
+    
+    func setQuestionIncorrect() {
+        self.incorrectQuestions.append(self.currentQuestion)
+    }
+    
+    func setQuestionUnanswered() {
+        self.unansweredQuestions.append(self.currentQuestion)
     }
     
     private func addNewQuestion(){
