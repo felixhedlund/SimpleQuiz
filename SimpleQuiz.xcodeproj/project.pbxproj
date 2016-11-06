@@ -20,6 +20,7 @@
 		F75DA8B61DCF85BC00C5012E /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8B51DCF85BC00C5012E /* GameEngine.swift */; };
 		F75DA8B81DCF88FE00C5012E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */; };
 		F75DA8BB1DCF8A7400C5012E /* ColorThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */; };
+		F75DA8BD1DCFD1C100C5012E /* HelpToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8BC1DCFD1C100C5012E /* HelpToolbarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F75DA8B51DCF85BC00C5012E /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeExtension.swift; sourceTree = "<group>"; };
+		F75DA8BC1DCFD1C100C5012E /* HelpToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpToolbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				F75DA8AC1DCF69B600C5012E /* BackgroundViewController.swift */,
 				F75DA8B21DCF70E800C5012E /* MenuViewController.swift */,
 				F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */,
+				F75DA8BC1DCFD1C100C5012E /* HelpToolbarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				F75DA8BB1DCF8A7400C5012E /* ColorThemeExtension.swift in Sources */,
 				F75DA8B31DCF70E800C5012E /* MenuViewController.swift in Sources */,
 				F75DA8AD1DCF69B600C5012E /* BackgroundViewController.swift in Sources */,
+				F75DA8BD1DCFD1C100C5012E /* HelpToolbarViewController.swift in Sources */,
 				F72A74DF1DCBBB7D00B40EFF /* AppDelegate.swift in Sources */,
 				F72A74E71DCBBB7D00B40EFF /* SimpleQuiz.xcdatamodeld in Sources */,
 			);

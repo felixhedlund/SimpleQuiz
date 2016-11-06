@@ -12,22 +12,29 @@ protocol Game{
     func nextQuestion()
     func endGame()
     func startGame()
+    
+    
+    func useFiftyFifty()
+    func usePlusTen()
+    func hasUsedFiftyFifty() -> Bool
+    func hasUsedPlusTen() -> Bool
 }
 
 class GameEngine: NSObject, Game{
     var firstVC: UIViewController!
     
-    var questionsLeft: Int!
+    var questionsLeft = 10
     var questions = [Question]()
     var currentQuestionController: QuestionViewController?
+    
+    var hasUsed5050 = false
+    var hasUsedPlus10 = false
     init(firstVC: UIViewController){
         super.init()
         self.firstVC = firstVC
     }
     
     func startGame() {
-        questionsLeft = 10
-        questions.removeAll()
         let fetchRequest = NSFetchRequest<Question>(entityName: "Question")
         do{
             let questions = try dataStack.mainContext.fetch(fetchRequest)
@@ -57,6 +64,22 @@ class GameEngine: NSObject, Game{
         }else{
             addNewQuestion()
         }
+    }
+    
+    func useFiftyFifty(){
+        self.hasUsed5050 = true
+    }
+    
+    func usePlusTen() {
+        self.hasUsedPlus10 = true
+    }
+    
+    func hasUsedFiftyFifty() -> Bool{
+        return self.hasUsed5050
+    }
+    
+    func hasUsedPlusTen() -> Bool{
+        return self.hasUsedPlus10
     }
     
     private func addNewQuestion(){

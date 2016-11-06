@@ -8,7 +8,7 @@
 
 import UIKit
 import IBAnimatable
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, HelpToolbarDelegate {
     @IBOutlet weak var questionTextView: AnimatableTextView!
     @IBOutlet var answers: [AnimatableButton]!
     @IBOutlet weak var timerContainer: UIView!
@@ -16,6 +16,10 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var timerHeight: NSLayoutConstraint!
     
     var game: Game!
+    var timer: Timer!
+    var question: Question!
+    
+    let startTime: TimeInterval = 15
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,17 +32,44 @@ class QuestionViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.beginTimer(totalTime: startTime)
+    }
+    
+    private func beginTimer(totalTime: TimeInterval){
+        print("Begin Timer with time: \(totalTime)")
+        self.timer = Timer.scheduledTimer(withTimeInterval: totalTime, repeats: false, block: { (timer) in
+           
+        })
+        
+        
         self.timerHeight.constant = 0
-        self.timerView.startColor = UIColor.black
-        self.timerView.endColor = UIColor.white
-        UIView.animate(withDuration: 15, animations: {
+        UIView.animate(withDuration: totalTime, animations: {
             self.view.layoutIfNeeded()
-            self.timerView.startColor = UIColor.black
-            self.timerView.endColor = UIColor.white
         }, completion: {
             (value: Bool) in
-            self.game.nextQuestion()
+            if value == true{
+                self.game.nextQuestion()
+            }
+            
         })
+    }
+    
+    func didPressPlusTen() {
+        self.timerView.layer.removeAllAnimations()
+        let timeLeft = timer.fireDate.timeIntervalSinceNow
+        let newTimeLeft = timeLeft + 10
+        self.timer.invalidate()
+        
+        let fullHeight = self.timerContainer.frame.height
+        let newHeight = (fullHeight / CGFloat(self.startTime))*CGFloat(newTimeLeft)
+        
+        self.timerHeight.constant = newHeight
+        self.view.layoutIfNeeded()
+        self.beginTimer(totalTime: newTimeLeft)
+    }
+    
+    func didPressFiftyFifty() {
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,14 +80,18 @@ class QuestionViewController: UIViewController {
     @IBAction func didPressAnswer(_ sender: AnimatableButton) {
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? HelpToolbarViewController{
+            destination.game = self.game
+            destination.delegate = self
+        }
     }
-    */
+    
 
 }
