@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import DATAStack
+
+
+let dataStack = DATAStack(modelName: "SimpleQuiz")
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

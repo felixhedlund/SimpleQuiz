@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		F5A81D322B1AA0956CE1B982 /* Pods_SimpleQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DA47A30168ABB8E085ABE8 /* Pods_SimpleQuiz.framework */; };
 		F72A74DF1DCBBB7D00B40EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A74DE1DCBBB7D00B40EFF /* AppDelegate.swift */; };
-		F72A74E11DCBBB7D00B40EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A74E01DCBBB7D00B40EFF /* ViewController.swift */; };
 		F72A74E41DCBBB7D00B40EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72A74E21DCBBB7D00B40EFF /* Main.storyboard */; };
 		F72A74E71DCBBB7D00B40EFF /* SimpleQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F72A74E51DCBBB7D00B40EFF /* SimpleQuiz.xcdatamodeld */; };
 		F72A74E91DCBBB7D00B40EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72A74E81DCBBB7D00B40EFF /* Assets.xcassets */; };
 		F72A74EC1DCBBB7D00B40EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72A74EA1DCBBB7D00B40EFF /* LaunchScreen.storyboard */; };
+		F72A74F41DCBC7E000B40EFF /* DataLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A74F31DCBC7E000B40EFF /* DataLoaderViewController.swift */; };
+		F75DA8AD1DCF69B600C5012E /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8AC1DCF69B600C5012E /* BackgroundViewController.swift */; };
+		F75DA8B11DCF6B1000C5012E /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = F75DA8B01DCF6B1000C5012E /* questions.json */; };
+		F75DA8B31DCF70E800C5012E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8B21DCF70E800C5012E /* MenuViewController.swift */; };
+		F75DA8B61DCF85BC00C5012E /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8B51DCF85BC00C5012E /* GameEngine.swift */; };
+		F75DA8B81DCF88FE00C5012E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */; };
+		F75DA8BB1DCF8A7400C5012E /* ColorThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +28,18 @@
 		E24ECFFA1ACAB0A0E6CAD198 /* Pods-SimpleQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleQuiz/Pods-SimpleQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		F72A74DB1DCBBB7D00B40EFF /* SimpleQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72A74DE1DCBBB7D00B40EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F72A74E01DCBBB7D00B40EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F72A74E31DCBBB7D00B40EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F72A74E61DCBBB7D00B40EFF /* SimpleQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleQuiz.xcdatamodel; sourceTree = "<group>"; };
 		F72A74E81DCBBB7D00B40EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F72A74EB1DCBBB7D00B40EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72A74ED1DCBBB7D00B40EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72A74F31DCBC7E000B40EFF /* DataLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoaderViewController.swift; sourceTree = "<group>"; };
+		F75DA8AC1DCF69B600C5012E /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		F75DA8B01DCF6B1000C5012E /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		F75DA8B21DCF70E800C5012E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F75DA8B51DCF85BC00C5012E /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +93,84 @@
 			isa = PBXGroup;
 			children = (
 				F72A74DE1DCBBB7D00B40EFF /* AppDelegate.swift */,
-				F72A74E01DCBBB7D00B40EFF /* ViewController.swift */,
-				F72A74E21DCBBB7D00B40EFF /* Main.storyboard */,
-				F72A74E81DCBBB7D00B40EFF /* Assets.xcassets */,
-				F72A74EA1DCBBB7D00B40EFF /* LaunchScreen.storyboard */,
-				F72A74ED1DCBBB7D00B40EFF /* Info.plist */,
-				F72A74E51DCBBB7D00B40EFF /* SimpleQuiz.xcdatamodeld */,
+				F75DA8AA1DCF698500C5012E /* View */,
+				F75DA8AF1DCF6A9100C5012E /* Model */,
+				F75DA8AB1DCF699E00C5012E /* Controllers */,
+				F75DA8A81DCF688300C5012E /* Assets */,
+				F75DA8AE1DCF6A7400C5012E /* Utilities */,
 			);
 			path = SimpleQuiz;
+			sourceTree = "<group>";
+		};
+		F75DA8A81DCF688300C5012E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8A91DCF688800C5012E /* JSON */,
+				F72A74E81DCBBB7D00B40EFF /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		F75DA8A91DCF688800C5012E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8B01DCF6B1000C5012E /* questions.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		F75DA8AA1DCF698500C5012E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F72A74EA1DCBBB7D00B40EFF /* LaunchScreen.storyboard */,
+				F72A74E21DCBBB7D00B40EFF /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F75DA8AB1DCF699E00C5012E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8B91DCF8A2A00C5012E /* Extensions */,
+				F75DA8B41DCF85A700C5012E /* GameEngine */,
+				F72A74F31DCBC7E000B40EFF /* DataLoaderViewController.swift */,
+				F75DA8AC1DCF69B600C5012E /* BackgroundViewController.swift */,
+				F75DA8B21DCF70E800C5012E /* MenuViewController.swift */,
+				F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F75DA8AE1DCF6A7400C5012E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F72A74ED1DCBBB7D00B40EFF /* Info.plist */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		F75DA8AF1DCF6A9100C5012E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F72A74E51DCBBB7D00B40EFF /* SimpleQuiz.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F75DA8B41DCF85A700C5012E /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8B51DCF85BC00C5012E /* GameEngine.swift */,
+			);
+			name = GameEngine;
+			sourceTree = "<group>";
+		};
+		F75DA8B91DCF8A2A00C5012E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72A74EC1DCBBB7D00B40EFF /* LaunchScreen.storyboard in Resources */,
+				F75DA8B11DCF6B1000C5012E /* questions.json in Resources */,
 				F72A74E91DCBBB7D00B40EFF /* Assets.xcassets in Resources */,
 				F72A74E41DCBBB7D00B40EFF /* Main.storyboard in Resources */,
 			);
@@ -190,7 +273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		99A2D946E219063FB1A3D6B2 /* [CP] Embed Pods Frameworks */ = {
@@ -215,7 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F72A74E11DCBBB7D00B40EFF /* ViewController.swift in Sources */,
+				F72A74F41DCBC7E000B40EFF /* DataLoaderViewController.swift in Sources */,
+				F75DA8B61DCF85BC00C5012E /* GameEngine.swift in Sources */,
+				F75DA8B81DCF88FE00C5012E /* QuestionViewController.swift in Sources */,
+				F75DA8BB1DCF8A7400C5012E /* ColorThemeExtension.swift in Sources */,
+				F75DA8B31DCF70E800C5012E /* MenuViewController.swift in Sources */,
+				F75DA8AD1DCF69B600C5012E /* BackgroundViewController.swift in Sources */,
 				F72A74DF1DCBBB7D00B40EFF /* AppDelegate.swift in Sources */,
 				F72A74E71DCBBB7D00B40EFF /* SimpleQuiz.xcdatamodeld in Sources */,
 			);
@@ -385,6 +473,7 @@
 				F72A74F21DCBBB7D00B40EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

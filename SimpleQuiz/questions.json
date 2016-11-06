@@ -1,0 +1,14 @@
+[
+ {
+    "id":0,
+    "question":"Which singer joined Mel Gibson in the movie Mad Max: Beyond The Thunderdome?",
+    "correctAlternative":0,
+    "alternatives":["Tina Turner","Whitney Houston","Lady Gaga","Beyoncé"]
+ },
+ {
+    "id":1,
+    "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
+    "correctAlternative":0,
+    "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ }
+]
