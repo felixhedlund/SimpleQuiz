@@ -21,7 +21,8 @@ class BackgroundViewController: UIViewController, BackgroundViewColorChangeDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        (UIApplication().delegate as! AppDelegate).background = self
+        (UIApplication.shared.delegate as! AppDelegate).background = self
+        setQuizColors()
         // Do any additional setup after loading the view.
     }
     

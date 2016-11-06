@@ -10,6 +10,7 @@ import UIKit
 import IBAnimatable
 class MenuViewController: UIViewController {
     @IBOutlet weak var startGameButton: AnimatableButton!
+    @IBOutlet weak var startGameLabel: AnimatableLabel!
 
     var gameEngine: GameEngine?
     
@@ -27,13 +28,14 @@ class MenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func didPressStartGame(_ sender: Any) {
+
+    @IBAction func didPressStartGame(_ sender: UIButton) {
+        self.startGameLabel.fade(.out)
         self.startGameButton.slideFade(.out, direction: .down){
             self.gameEngine = GameEngine(firstVC: self)
+            self.gameEngine!.startGame()
         }
     }
-
     /*
     // MARK: - Navigation
 
