@@ -20,6 +20,7 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     var question: Question!
     
     let startTime: TimeInterval = 5
+    var totalQuestionTimer: Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setAnswers()
@@ -48,6 +49,8 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         self.beginTimer(totalTime: startTime)
+        totalQuestionTimer = Timer.scheduledTimer(withTimeInterval: TimeInterval.infinity, repeats: false, block: { (timer) in
+        })
     }
     
     private func beginTimer(totalTime: TimeInterval){
@@ -63,10 +66,17 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
         }, completion: {
             (value: Bool) in
             if value == true{
+                self.setTotalTime()
                 self.game.nextQuestion()
             }
             
         })
+    }
+    
+    private func setTotalTime(){
+        let totalTime = self.totalQuestionTimer.fireDate.timeIntervalSinceNow
+        self.game.timeForFinishedQuestion(timeInterval: totalTime)
+        self.totalQuestionTimer.invalidate()
     }
     
     func didPressPlusTen() {
@@ -117,6 +127,7 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     }
     
     @IBAction func didPressAnswer(_ sender: AnimatableButton) {
+        self.setTotalTime()
         self.timer.invalidate()
         self.timerView.layer.removeAllAnimations()
         var index = 0
@@ -139,7 +150,7 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
             button.fillColor = UIColor.red
         }
         
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { (timer) in
             self.game.nextQuestion()
         })
     }

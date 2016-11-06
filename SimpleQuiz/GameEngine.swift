@@ -14,6 +14,8 @@ protocol Game{
     func startGame()
     
     
+    func timeForFinishedQuestion(timeInterval: TimeInterval)
+    
     func useFiftyFifty()
     func usePlusTen()
     func hasUsedFiftyFifty() -> Bool
@@ -27,6 +29,7 @@ class GameEngine: NSObject, Game{
     var currentQuestion = -1
     var questions = [Question]()
     var currentQuestionController: QuestionViewController?
+    var timeIntervals = [TimeInterval]()
     
     var hasUsed5050 = false
     var hasUsedPlus10 = false
@@ -65,6 +68,10 @@ class GameEngine: NSObject, Game{
         }else{
             addNewQuestion()
         }
+    }
+    
+    func timeForFinishedQuestion(timeInterval: TimeInterval) {
+        self.timeIntervals.append(timeInterval)
     }
     
     func useFiftyFifty(){
