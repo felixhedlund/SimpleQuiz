@@ -24,6 +24,8 @@ protocol Game{
     func usePlusTen()
     func hasUsedFiftyFifty() -> Bool
     func hasUsedPlusTen() -> Bool
+    
+    func returnToMenu()
 }
 
 class GameEngine: NSObject, Game{
@@ -129,9 +131,18 @@ class GameEngine: NSObject, Game{
         
     }
     
+    func returnToMenu() {
+        self.firstVC.returnToMenu()
+    }
+    
+    
     func endGame() {
         (UIApplication.shared.delegate as! AppDelegate).background.setInitialColors()
-        self.firstVC.returnToMenu()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Statistics") as! StatisticsViewController
+        vc.game = self
+        self.firstVC.present(vc, animated: true, completion: {
+        })
+
     }
     
 }

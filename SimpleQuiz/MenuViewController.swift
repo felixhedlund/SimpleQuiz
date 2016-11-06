@@ -32,6 +32,7 @@ class MenuViewController: UIViewController {
     func returnToMenu(){
         self.startGameButton.slide(.in, direction: .left)
         self.startGameLabel.slide(.in, direction: .right)
+        self.gameEngine = nil
     }
 
     @IBAction func didPressStartGame(_ sender: UIButton) {

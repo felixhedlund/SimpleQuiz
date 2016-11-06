@@ -21,6 +21,8 @@
 		F75DA8B81DCF88FE00C5012E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */; };
 		F75DA8BB1DCF8A7400C5012E /* ColorThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */; };
 		F75DA8BD1DCFD1C100C5012E /* HelpToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8BC1DCFD1C100C5012E /* HelpToolbarViewController.swift */; };
+		F75DA8C41DCFEAE800C5012E /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8C31DCFEAE800C5012E /* StatisticsViewController.swift */; };
+		F75DA8C61DCFEC3400C5012E /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75DA8C51DCFEC3400C5012E /* StatisticTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeExtension.swift; sourceTree = "<group>"; };
 		F75DA8BC1DCFD1C100C5012E /* HelpToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpToolbarViewController.swift; sourceTree = "<group>"; };
+		F75DA8C31DCFEAE800C5012E /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		F75DA8C51DCFEC3400C5012E /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,11 +139,11 @@
 			children = (
 				F75DA8B91DCF8A2A00C5012E /* Extensions */,
 				F75DA8B41DCF85A700C5012E /* GameEngine */,
-				F72A74F31DCBC7E000B40EFF /* DataLoaderViewController.swift */,
-				F75DA8AC1DCF69B600C5012E /* BackgroundViewController.swift */,
-				F75DA8B21DCF70E800C5012E /* MenuViewController.swift */,
-				F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */,
-				F75DA8BC1DCFD1C100C5012E /* HelpToolbarViewController.swift */,
+				F75DA8C01DCFEAC300C5012E /* Background */,
+				F75DA8BF1DCFEAB600C5012E /* DataLoader */,
+				F75DA8C11DCFEAC800C5012E /* Menu */,
+				F75DA8BE1DCFEAA500C5012E /* Question */,
+				F75DA8C21DCFEACF00C5012E /* Statistics */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +178,48 @@
 				F75DA8BA1DCF8A7400C5012E /* ColorThemeExtension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		F75DA8BE1DCFEAA500C5012E /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8B71DCF88FE00C5012E /* QuestionViewController.swift */,
+				F75DA8BC1DCFD1C100C5012E /* HelpToolbarViewController.swift */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
+		F75DA8BF1DCFEAB600C5012E /* DataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				F72A74F31DCBC7E000B40EFF /* DataLoaderViewController.swift */,
+			);
+			name = DataLoader;
+			sourceTree = "<group>";
+		};
+		F75DA8C01DCFEAC300C5012E /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8AC1DCF69B600C5012E /* BackgroundViewController.swift */,
+			);
+			name = Background;
+			sourceTree = "<group>";
+		};
+		F75DA8C11DCFEAC800C5012E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8B21DCF70E800C5012E /* MenuViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		F75DA8C21DCFEACF00C5012E /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				F75DA8C31DCFEAE800C5012E /* StatisticsViewController.swift */,
+				F75DA8C51DCFEC3400C5012E /* StatisticTableViewCell.swift */,
+			);
+			name = Statistics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72A74F41DCBC7E000B40EFF /* DataLoaderViewController.swift in Sources */,
+				F75DA8C41DCFEAE800C5012E /* StatisticsViewController.swift in Sources */,
 				F75DA8B61DCF85BC00C5012E /* GameEngine.swift in Sources */,
+				F75DA8C61DCFEC3400C5012E /* StatisticTableViewCell.swift in Sources */,
 				F75DA8B81DCF88FE00C5012E /* QuestionViewController.swift in Sources */,
 				F75DA8BB1DCF8A7400C5012E /* ColorThemeExtension.swift in Sources */,
 				F75DA8B31DCF70E800C5012E /* MenuViewController.swift in Sources */,
