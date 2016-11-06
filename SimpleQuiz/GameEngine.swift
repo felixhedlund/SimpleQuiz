@@ -10,6 +10,7 @@ import UIKit
 
 protocol Game{
     func nextQuestion()
+    func endGame()
 }
 
 class GameEngine: NSObject, Game{
@@ -21,6 +22,11 @@ class GameEngine: NSObject, Game{
     }
     
     func nextQuestion() {
+        (UIApplication().delegate as! AppDelegate).background.animateColorForQuestion()
+    }
+    
+    func endGame() {
+        (UIApplication().delegate as! AppDelegate).background.setInitialColors()
     }
     
 }

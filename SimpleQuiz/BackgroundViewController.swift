@@ -7,18 +7,64 @@
 //
 
 import UIKit
+import IBAnimatable
 
-class BackgroundViewController: UIViewController {
+protocol BackgroundViewColorChangeDelegate{
+    func setInitialColors()
+    func animateColorForQuestion()
+}
 
+class BackgroundViewController: UIViewController, BackgroundViewColorChangeDelegate {
+    @IBOutlet var triangles: [AnimatableView]!
+    
+    var quizColors: NSMutableArray!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        (UIApplication().delegate as! AppDelegate).background = self
         // Do any additional setup after loading the view.
+    }
+    
+    private func setQuizColors(){
+        quizColors = [UIColor.quizRed, UIColor.quizBlue, UIColor.quizGreen, UIColor.quizOrange, UIColor.quizYellow]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setInitialColors() {
+        self.animateBackgroundWithColor(UIColor.white)
+        self.animateTrianglesWithColor(UIColor.quizBlue)
+    }
+    
+    func animateColorForQuestion(){
+        let randomInt = Int(arc4random_uniform(5))
+        let color1 = self.quizColors!.object(at: randomInt) as! UIColor
+        self.quizColors.removeObject(at: randomInt)
+        self.animateTrianglesWithColor(color1)
+        
+        
+        let newRandom = Int(arc4random_uniform(4))
+        let color2 = self.quizColors!.object(at: newRandom) as! UIColor
+        self.animateBackgroundWithColor(color2)
+        
+        self.setQuizColors()
+    }
+    
+    private func animateBackgroundWithColor(_ color: UIColor){
+        UIView.animate(withDuration: 1.0, delay: 0.0, options:[UIViewAnimationOptions.curveEaseIn], animations: {
+            self.view.backgroundColor = color
+        }, completion:nil)
+    }
+    
+    private func animateTrianglesWithColor(_ color: UIColor){
+        UIView.animate(withDuration: 1.0, delay: 0.0, options:[UIViewAnimationOptions.curveEaseIn], animations: {
+            for triangle in self.triangles{
+                triangle.fillColor = color
+            }
+        }, completion:nil)
     }
     
 

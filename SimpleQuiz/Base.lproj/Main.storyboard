@@ -187,6 +187,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outletCollection property="triangles" destination="4bZ-Vn-w3j" collectionClass="NSMutableArray" id="hnC-Xu-nCg"/>
+                        <outletCollection property="triangles" destination="Tji-pM-9Ht" collectionClass="NSMutableArray" id="CDo-8J-TxW"/>
+                        <outletCollection property="triangles" destination="EZs-7e-Aq8" collectionClass="NSMutableArray" id="2Wa-DR-SKo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tsd-v8-XYu" sceneMemberID="firstResponder"/>
             </objects>
