@@ -10,6 +10,12 @@ import UIKit
 import IBAnimatable
 class QuestionViewController: UIViewController, HelpToolbarDelegate {
     @IBOutlet weak var questionTextView: AnimatableTextView!
+    
+    @IBOutlet weak var questionForeGround: AnimatableView!
+    
+    @IBOutlet weak var questionImage: AnimatableImageView!
+    
+    
     @IBOutlet var answers: [AnimatableButton]!
     @IBOutlet weak var timerContainer: UIView!
     @IBOutlet weak var timerView: AnimatableView!
@@ -19,7 +25,7 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     var timer: Timer!
     var question: Question!
     
-    let startTime: TimeInterval = 5
+    let startTime: TimeInterval = 15
     
     let maxTime: TimeInterval = 60
     var totalQuestionTimer: Timer!
@@ -31,7 +37,14 @@ class QuestionViewController: UIViewController, HelpToolbarDelegate {
     }
     
     private func setQuestion(){
-        self.questionTextView.text = self.question.question!
+        if let imagePath = question.imagePath{
+            self.questionTextView.isHidden = true
+            self.questionForeGround.isHidden = true
+            self.questionImage.image = UIImage(named: imagePath)
+        }else{
+            self.questionTextView.text = self.question.question!
+        }
+        
     }
     
     private func setAnswers(){

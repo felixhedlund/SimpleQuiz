@@ -13,133 +13,92 @@
  },
  {
  "id":2,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"",
+ "correctAlternative":2,
+ "alternatives":["Sara","Helena","Frida","Matilda"],
+ "imagePath": "frida"
  },
  {
  "id":3,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"",
+ "correctAlternative":3,
+ "alternatives":["Ireland","Wales","Scottland","England"],
+ "imagePath": "hp"
  },
  {
  "id":4,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
+ "question":"",
  "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "alternatives":["Wizard","God","Angel","Devil"],
+ "imagePath": "hp"
  },
  {
  "id":5,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"",
+ "correctAlternative":1,
+ "alternatives":["Lust","Pride","Russia","Hate"],
+ "imagePath": "pride"
  },
  {
  "id":6,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"",
+ "correctAlternative":2,
+ "alternatives":["AAA","HBAT","LGBTQ+","LGKTQ"],
+ "imagePath": "pride"
  }, {
  "id":7,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
+ "question":"",
  "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "alternatives":["Stockholm","Copenhagen","Moscow","Toronto"],
+ "imagePath": "frida"
  }, {
  "id":8,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
+ "question":"Mirror, mirror, on the wall. Who is the fairest of them all?",
  "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "alternatives":["Snow White","Rapunsel","Pocahontas","Angelina Jolie"]
  },
  {
  "id":9,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"What is the name of the Little Mermaid?",
+ "correctAlternative":1,
+ "alternatives":["Lois","Ariel","Ariana","Mildred"]
  }, {
  "id":10,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"What is the capitol of Norway?",
+ "correctAlternative":3,
+ "alternatives":["Karlstad","Lillehammer","Bergen","Oslo"]
  },
  {
  "id":11,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
+ "question":"Which of these is a song by Lady Gaga?",
  "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "alternatives":["Applause","Fame","Hungry Eyes","Diamonds"]
  }, {
  "id":12,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"Which of these is a song by Beyoncé?",
+ "correctAlternative":1,
+ "alternatives":["Applause","Pretty Hurts","WILD","Final Song"]
  }, {
  "id":13,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"Which of these is a song by Ariana Grande?",
+ "correctAlternative":3,
+ "alternatives":["Shutdown","Looking","Wonder Woman","Side to Side"]
  },
  {
  "id":14,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"What nationality is NOT included in the TV show Sense8 by Netflix?",
+ "correctAlternative":1,
+ "alternatives":["Icelandic","Danish","American","Korean"]
  },
  {
  "id":15,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
+ "question":"How many beaches are there in Australia?",
+ "correctAlternative":2,
+ "alternatives":["1285","Closer to 500","Over 10000","Over 50000"]
  }, {
  "id":16,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
+ "question":"Who started the first anti-smoking and tobacco movement?",
  "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- },
- {
- "id":17,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- },
- {
- "id":18,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- }, {
- "id":19,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- }, {
- "id":20,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- },
- {
- "id":21,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- },
- {
- "id":22,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- }, {
- "id":23,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- },
- {
- "id":24,
- "question":"Vodka, Galliano and orange juice are used to make which classic cocktail?",
- "correctAlternative":0,
- "alternatives":["Harvey Wallbanger","Bloody Mary","Vodka Sunrise","Manhattan"]
- },
- 
-
+ "alternatives":["The Nazis","Chinese youth","Frank Sinatra","WHO"]
+ }
 ]

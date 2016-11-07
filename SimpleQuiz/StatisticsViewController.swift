@@ -69,16 +69,16 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         switch indexPath.section{
         case 0:
             let questionNr = game.correctQuestions[indexPath.row]
-            cell.leftLabel.text = "Question Nr: \(questionNr)"
-            cell.rightLabel.text = "Time: \(self.roundFromTimeInterval(time:game.timeIntervals[questionNr])) s"
+            cell.leftLabel.text = "Question Nr: \(questionNr + 1)"
+            cell.rightLabel.text = "\(self.roundFromTimeInterval(time:game.timeIntervals[questionNr])) s"
         case 1:
             let questionNr = game.incorrectQuestions[indexPath.row]
-            cell.leftLabel.text = "Question Nr: \(questionNr)"
-            cell.rightLabel.text = "Time: \(self.roundFromTimeInterval(time:game.timeIntervals[questionNr])) s"
+            cell.leftLabel.text = "Question Nr: \(questionNr + 1)"
+            cell.rightLabel.text = "\(self.roundFromTimeInterval(time:game.timeIntervals[questionNr])) s"
         case 2:
             let questionNr = game.unansweredQuestions[indexPath.row]
-            cell.leftLabel.text = "Question Nr: \(questionNr)"
-            cell.rightLabel.text = "Time: \(self.roundFromTimeInterval(time:game.timeIntervals[questionNr])) s"
+            cell.leftLabel.text = "Question Nr: \(questionNr + 1)"
+            cell.rightLabel.text = "\(self.roundFromTimeInterval(time:game.timeIntervals[questionNr])) s"
         case 3:
             switch indexPath.row{
             case 0:

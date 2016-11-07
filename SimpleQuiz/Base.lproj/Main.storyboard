@@ -334,7 +334,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivp-w9-4QF" userLabel="Top">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenButton" translatesAutoresizingMaskIntoConstraints="NO" id="pON-vH-DHH" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenButton" translatesAutoresizingMaskIntoConstraints="NO" id="pON-vH-DHH" customClass="AnimatableImageView" customModule="IBAnimatable">
                                         <rect key="frame" x="-0.5" y="0.5" width="375" height="333.5"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="_maskType" value="Circle"/>
@@ -661,6 +661,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="questionForeGround" destination="6ct-Z3-dYi" id="0bd-gf-uPF"/>
+                        <outlet property="questionImage" destination="pON-vH-DHH" id="AnR-ha-h4c"/>
                         <outlet property="questionTextView" destination="Woj-rB-bMv" id="Nye-LH-tsr"/>
                         <outlet property="timerContainer" destination="Qmd-BN-wju" id="6f1-fC-zB1"/>
                         <outlet property="timerHeight" destination="ZgO-dL-Jya" id="l0B-aP-Rwd"/>
@@ -721,16 +723,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Question Nr: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="98N-uh-LD6">
-                                                    <rect key="frame" x="15" y="12" width="109" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="110" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="21.5 s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zrh-qs-LhP">
-                                                    <rect key="frame" x="315" y="12" width="45" height="21"/>
+                                                    <rect key="frame" x="315.5" y="12" width="44.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -773,6 +775,10 @@
         <scene sceneID="q39-rq-WlD">
             <objects>
                 <viewController id="i3k-DE-wEB" customClass="HelpToolbarViewController" customModule="SimpleQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z7H-0K-eUm"/>
+                        <viewControllerLayoutGuide type="bottom" id="2dO-1m-Vi6"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kSC-Ec-Za5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

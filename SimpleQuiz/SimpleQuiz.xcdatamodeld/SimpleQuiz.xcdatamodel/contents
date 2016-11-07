@@ -8,9 +8,10 @@
                 <entry key="hyper.isPrimaryKey" value="true"/>
             </userInfo>
         </attribute>
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Question" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Question" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

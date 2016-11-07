@@ -31,7 +31,7 @@ protocol Game{
 class GameEngine: NSObject, Game{
     var firstVC: MenuViewController!
     
-    var totalQuestions = 3
+    var totalQuestions = 10
     var currentQuestion = -1
     var questions = [Question]()
     var currentQuestionController: QuestionViewController?
